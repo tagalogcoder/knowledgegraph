@@ -1,0 +1,41 @@
+{
+  "name": "kudu",
+  "version": "0.1.0",
+  "description": "Code navigation and an agent skill for memory, lean coding, review, and audit",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "kudu": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "install.js",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.0",
+    "chokidar": "^4.0.3",
+    "ignore": "^7.0.5",
+    "typescript": "^5.9.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0"
+  }
+}
